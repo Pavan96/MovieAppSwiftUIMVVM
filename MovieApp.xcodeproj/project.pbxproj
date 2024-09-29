@@ -42,6 +42,7 @@
 /* Begin PBXFileReference section */
 		9C97E24C2CA8652000BA4306 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		9C97E24F2CA9760600BA4306 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		9C97E2512CA9806700BA4306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9CCA15362CA7B9DA00BC12ED /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CCA15392CA7B9DA00BC12ED /* MovieAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppApp.swift; sourceTree = "<group>"; };
 		9CCA153B2CA7B9DA00BC12ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 		9CCA15382CA7B9DA00BC12ED /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				9C97E2512CA9806700BA4306 /* Info.plist */,
 				9CCA156E2CA85FC200BC12ED /* Extensions */,
 				9CCA156D2CA85FB700BC12ED /* Views */,
 				9CCA156C2CA85FAE00BC12ED /* Screen */,
@@ -515,6 +517,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MovieApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MovieApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -543,6 +546,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MovieApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MovieApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

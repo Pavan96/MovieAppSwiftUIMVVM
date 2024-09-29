@@ -14,6 +14,20 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
+            
+            // We will remove code after testing
+                .onAppear{
+                    MoviesAPIService(aHttpClient: HTTPClient()).getMoviesBy(search: "batman") { result in
+                        
+                        switch result {
+                        case .success(let  movies):
+                            print(movies)
+                            
+                        case .failure(let error):
+                            print(error)
+                        }
+                    }
+                }
         }
         .padding()
     }

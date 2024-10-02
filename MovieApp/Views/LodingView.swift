@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LodingView: View {
     var body: some View {
-        HStack(spacing: 20) {
+        HStack(alignment: .center, spacing: 20) {
             Text("Loading")
                 .font(.system(size: 20).bold())
                 .foregroundColor(.blue)

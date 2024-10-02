@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct FailedView: View {
+    
+    @State private var enlarge = false
+    
     var body: some View {
-        Image("image-oops")
+        VStack {
+            Image("image-oops")
+                .cornerRadius(20)
+                .scaleEffect(CGSize(width: 0.5, height: 0.5))
+
+        }   .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.gray)
+            
     }
 }
 

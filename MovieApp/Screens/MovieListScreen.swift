@@ -24,7 +24,9 @@ struct MovieListScreen: View {
             Spacer()
             .navigationTitle("Movies")
 
-            if (self.movieListVM.loadingState == .success) {
+            if (self.movieListVM.loadingState == .loading) {
+                LodingView()
+            } else if (self.movieListVM.loadingState == .success) {
                 MovieListView(movies: self.movieListVM.movies)
             } else if(self.movieListVM.loadingState == .failed) {
                 FailedView()

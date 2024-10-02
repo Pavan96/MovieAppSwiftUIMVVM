@@ -19,6 +19,8 @@ class MovieListVieModel: ViewModelBase {
             return
         }
         
+        self.loadingState = .loading
+        
         apiService.getMoviesBy(search: name.trimmedAndEscapped()) { result  in
             switch result {
             case .success(let movies):

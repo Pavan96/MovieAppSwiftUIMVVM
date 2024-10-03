@@ -9,7 +9,7 @@ import Foundation
 
 class HTTPClient {
     
-    func makeRequest<T: Codable>(aUrl: URL, completion: @escaping (Result<T, NetworkError>) -> Void) {
+    func makeRequest<T: Decodable>(aUrl: URL, completion: @escaping (Result<T, NetworkError>) -> Void) {
         let request = URLRequest(url: aUrl)
         URLSession(configuration: .default).dataTask(with: request) { data, response, error in
             guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
@@ -65,6 +65,21 @@ class MoviesAPIService {
                case .failure(let error):
                 print(error)
                 completion(.failure(error))
+            }
+        }
+    }
+    
+    func getMovieByDetail(imdbId: String, completion: @escaping (Result<MovieDetail, NetworkError>) -> Void) {
+        guard let url = URL.forMovieByImdbId(imdbId) else {
+            return completion(.failure(.invalidURL))
+        }
+        
+        httpClient.makeRequest(aUrl: url) { (result: Result<MovieDetail, NetworkError>) in
+            switch result {
+                case .success(let movieDetail):
+                    completion(.success(movieDetail))
+                case .failure(let error):
+                    completion(.failure(error))
             }
         }
     }

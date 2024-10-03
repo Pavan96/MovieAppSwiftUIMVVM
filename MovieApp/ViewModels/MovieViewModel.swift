@@ -37,6 +37,10 @@ class MovieListVieModel: ViewModelBase {
             }
         }
     }
+    
+    func getMovieDetailsBy(imdbId: String) {
+        
+    }
 }
 
 struct MovieViewModel {

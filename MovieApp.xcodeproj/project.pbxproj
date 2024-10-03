@@ -204,8 +204,8 @@
 		9CCA15692CA85F8E00BC12ED /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				9C97E2542CA983CE00BA4306 /* MovieViewModel.swift */,
 				9CD7DA2A2CAD6F1C0077719B /* ViewModelBase.swift */,
+				9C97E2542CA983CE00BA4306 /* MovieViewModel.swift */,
 				9CD7DA302CAF10020077719B /* MovieDetailViewModel.swift */,
 			);
 			path = ViewModels;

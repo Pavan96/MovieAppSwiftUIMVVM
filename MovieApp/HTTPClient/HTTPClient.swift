@@ -27,13 +27,16 @@ class HTTPClient {
             do {
                 let result = try JSONDecoder().decode(T.self, from: data)
                 completion(.success(result))
-            } catch {
+            } catch let error{
+                print(error.localizedDescription.debugDescription)
+                debugPrint(error)
                 completion(.failure(.decodingError))
                 return
             }
         }.resume()
     }
 }
+
 
 enum NetworkError: Error {
     case invalidURL
@@ -76,8 +79,8 @@ class MoviesAPIService {
         
         httpClient.makeRequest(aUrl: url) { (result: Result<MovieDetail, NetworkError>) in
             switch result {
-                case .success(let movieDetail):
-                    completion(.success(movieDetail))
+                case .success(let movieDetailRes):
+                 completion(.success(movieDetailRes))
                 case .failure(let error):
                     completion(.failure(error))
             }

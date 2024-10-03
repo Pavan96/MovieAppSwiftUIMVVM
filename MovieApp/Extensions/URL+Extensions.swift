@@ -14,7 +14,7 @@ extension URL {
     }
     
     static func forMovieByImdbId(_ imdbId: String) -> URL? {
-        return  URL(string: "http://www.omdbapi.com/?s=\(imdbId)&apikey=\(Constants.API_KEY)")
+        return  URL(string: "http://www.omdbapi.com/?i=\(imdbId)&apikey=\(Constants.API_KEY)")
 
     }
 }

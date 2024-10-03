@@ -17,6 +17,7 @@ struct MovieDetailView: View {
             VStack(alignment: .leading, spacing: 10) {
                 URLImage(url: movieDetailVM.poster)
                     .cornerRadius(10)
+        
                 
                 Text(movieDetailVM.title).font(.title)
                 Text("Director").fontWeight(.bold)
@@ -29,7 +30,7 @@ struct MovieDetailView: View {
                 Spacer()
             }.padding()
             
-                .navigationTitle(self.movieDetailVM.title)
+            .navigationTitle(self.movieDetailVM.title)
         }
     }
 }

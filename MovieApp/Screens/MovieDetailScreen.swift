@@ -19,19 +19,15 @@ struct MovieDetailScreen: View {
             if movieDetailVM.loadingState == .loading {
                 LodingView()
             } else if movieDetailVM.loadingState == .success {
-                
+                MovieDetailView(movieDetailVM: movieDetailVM)
             } else if movieDetailVM.loadingState == .failed {
                 FailedView()
             }
             
         }.onAppear {
-            
+            self.movieDetailVM.getMovieDetailsByImbId(imbId: self.imdbId)
         }
     }
 }
 
-struct MovieDetailScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        MovieDetailScreen()
-    }
-}
+

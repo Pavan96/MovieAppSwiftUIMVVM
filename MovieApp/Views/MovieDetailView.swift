@@ -22,16 +22,25 @@ struct MovieDetailView: View {
                 Text("Director").fontWeight(.bold)
                 Text(movieDetailVM.director)
                 HStack {
-                    Rating(rating: .constant(movieDetailVM.rated))
-                    Text("\(movieDetailVM.rated)/10")
-                }
-            }
+                    Rating(rating: .constant(movieDetailVM.rating))
+                    Text("\(movieDetailVM.rating)/10")
+                }.padding(.top, 10)
+                
+                Spacer()
+            }.padding()
+            
+                .navigationTitle(self.movieDetailVM.title)
         }
     }
 }
 
 struct MovieDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieDetailView()
+        
+        let movieDetail = MovieDetail(title: "Bataman Begins", year: "1992", rated: "PG-13", plot: "After traainig with mentor, Btaman begin to fly high in the sky ", director: "Christopher Nolan", actors: "", imdbRating: "4.8", poster: "https://m.media-amazon.com/images/I/71Ag2Mr786L._SL1500_.jpg", imdbId: "34t5r")
+        
+        return MovieDetailView(movieDetailVM: MovieDetailViewModel(movieDetail: movieDetail))
+            .embedNavigationView()
+        
     }
 }

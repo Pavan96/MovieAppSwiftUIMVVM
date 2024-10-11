@@ -7,4 +7,7 @@ This app demonstrate the following usage:
    - NavigationView data passing
 
 
-![Simulator Screen Shot - iPhone 14 Pro - 2024-10-04 at 00 45 39](https://github.com/user-attachments/assets/d5e4b9e0-8b15-4908-8351-1136ba1a3b26)
+![Simulator Screen Shot - iPhone 14 Pro - 2024-10-04 at 00 46 07](https://github.com/user-attachments/assets/c789e315-6620-41ea-b1f7-ceb938689f4e)
+
+
+![Simulator Screen Shot - iPhone 14 Pro - 2024-10-04 at 00 45 29](https://github.com/user-attachments/assets/9085d1f5-8fb5-42ff-a424-887db4f07c9e)
